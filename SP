@@ -1,0 +1,142 @@
+#include <iostream>
+#include <ctime>
+#include "SpecialPrograms.h"
+
+using namespace std;
+
+void launchRandomNumGen()
+{
+    cout << "**********************************" << endl;
+    cout << "Random Number Generation Function" << endl;
+
+    srand(time(NULL));
+
+    int num = (rand() % 20) + 1;
+
+    cout << num;
+
+    cout << "**********************************" << endl;
+}
+
+void LaunchRandomEventGen()
+{
+    cout << "**********************************" << endl;
+    cout << "Random Event Generation Function" << endl;
+
+    srand(time(0));
+    int randNum = rand() % 5 + 1;
+
+    switch(randNum)
+    {
+        case 1:
+            cout << " You win a bumper sticker! \n";
+            break;
+
+        case 2:
+            cout << " You win a concert ticket! \n";
+            break;
+        
+        case 3:
+            cout << " You Win a free lunch! \n";
+            break;
+    }
+    cout << "**********************************" << endl;
+}
+
+void LaunchNumGuessingGame()
+{
+    int num;
+    int guess;
+    int tries;
+
+    srand(time(NULL));
+    num = (rand() % 100) + 1;
+
+    cout << "**********************************" << endl;
+    cout << "********* Number Guessing Game *********" << endl;
+
+    do
+    {
+        cout << "Enter a guess between (1-100) : ";
+        cin >> guess;
+
+        if(guess > num)
+        {
+            cout << " Too High! \n";
+        }
+        else if(guess < num)
+        {
+            cout << " Too Low! \n";
+        }
+        else
+        {
+            cout << " Correct! # num of tries: " << tries << '\n';
+        }
+    }
+    while(guess != num);
+
+    cout << "**********************************" << endl;
+}  
+
+void showBalance(double balance);
+double deposit();
+double withdraw(double balance);
+
+void LaunchMainBankingAPP()
+{
+    double balance = 123;
+    int choice = 0;
+
+    do
+    {
+        
+    cout << "Welcome to the Banking Program" << endl;
+    cout << "**********************************" << endl;
+    cout << "Enter your choice" << endl;
+    cout << "1. Show Balance \n" << endl;
+    cout << "2. Deposit Money \n" << endl;
+    cout << "3. Withdraw Money \n" << endl;
+    cout << "4. Exit \n" << endl;
+    cout << "**********************************" << endl;
+    cin >> choice;
+
+    switch(choice)
+    {
+        case 1: 
+            showBalance(balance);
+            break;
+        case 2:
+            balance = balance + deposit();
+            break;
+        case 3:
+            balance = balance - withdraw(balance);
+            break;
+        case 4:
+            cout << "Thanks for visiting \n";
+            break;
+        default:
+            cout << "Invalid choice \n";
+    }
+    } while (choice != 4);
+    
+}
+
+void showBalance(double balance)
+{
+    cout << " Your balance is $" << balance << endl;
+    cout << "**********************************" << endl;
+}
+
+double deposit()
+{
+    cout << "Thank you for your deposit" << endl;
+    cout << "**********************************" << endl;
+    return 0;
+}
+
+double withdraw(double balance)
+{
+    cout << "Thank you for your withdraw" << endl;
+    cout << "**********************************" << endl;
+    return 0;
+}
