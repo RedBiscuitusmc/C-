@@ -1,0 +1,46 @@
+//TODO | Notes |
+/*
+    You have to first declare a Varaible 
+    Then you must assign a Varaible
+
+header files are preprocressor 
+
+CPP are compiled 
+
+Notes for Synax:
+ >> is an extraction opration
+
+the const keyword specifies that a variable's value is constant 
+this tells the compiler to prevent anything from modifying it
+(( read only ))
+
+typedef = reserved keyword used to create an additional name
+( alias ) for another data type.
+New identifier for an existing type
+helps with readability and reduces typos
+
+
+arithmetic operators = return the result of a specific arithmetic operation( + - * / )
+
+Type conversion = conversion a value of one data type to another
+    implicit = automatic
+    explicit = precede value with new data type (int)
+
+user input:
+    cout << ((insert operator))
+    cin << ((extraction operator))
+
+
+if statements:
+if states do something -- if a condition is true - run code
+                        if NOT, then - don't run code
+
+Ternary operator ?: == replacement of the if / else statement 
+Condition ? expression1 : expression2;
+
+logic Operations
+&& == check if two conditions are true
+|| == check if at least one of two conditions is true
+! = rerses the logical state of its operand
+
+*/
