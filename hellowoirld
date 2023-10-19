@@ -1,0 +1,8 @@
+#include <iostream>
+#include "LaunchProgram.h"
+
+int main()
+{
+    LaunchProgram();
+    return 0;
+}
