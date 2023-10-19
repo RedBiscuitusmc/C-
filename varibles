@@ -1,0 +1,595 @@
+include <iostream>
+#include <vector>
+#include<cmath>
+#include "Variables.h"
+
+using namespace std;
+
+//typedefs
+typedef std:: vector<std::pair<std::string, int>> pairlist_t;
+typedef std::string text_t;
+typedef int number_t;
+
+namespace first
+{
+    int x = 1;
+}
+
+namespace second
+{
+    int x = 2;
+}
+
+void SpacersForTerm()
+{
+    string space;
+
+    space = "==========================================================";
+
+    cout << space << endl;
+}
+
+void HelloWorld()
+{
+    // opener for the program
+    cout << "Hello World!" << '\n';
+    cout << "Below we will print Varaibles && other types of examples of code written in c++" << '\n';
+}
+
+void UserInputIntro()
+{
+    //oepner for user inputs section
+    cout << "User Inputs Section" << '\n';
+    cout << "Below you will be asked to give inputs into the console... the output will be displayed after" << '\n';
+}
+
+void UserInputCaseMonths()
+{
+    //info for month case switch function
+    cout << "Month Case Switch" << '\n';
+    cout << "Input a number 1-12 to find out the month" << '\n';
+}
+
+void ifStatementsInfo()
+{
+    //info for if statement function
+    cout << "If statement " << '\n';
+    cout << "input an age to find out what your reward is..." << '\n';
+}
+
+void RightAngleInfo()
+{
+    //info for right angle function
+    cout << "Imported math functions || finding a right angle " << '\n';
+    cout << "input different numbers to find a rightangle" << '\n';
+}
+
+void UserInputINFO()
+{
+    //info for user input capturing
+    cout << "Usr Input Capturing " << '\n';
+    cout << "input your age then your full name to see the output" << '\n';
+}
+
+void userInputLoadUp()
+{
+    //userInput
+    //=============================
+    UserInputIntro();
+    //=============================
+    SpacersForTerm();
+    SpacersForTerm();
+    //=============================
+    NestedForLoops();
+    //=============================
+    SpacersForTerm();
+    SpacersForTerm();
+    //=============================
+    LaunchDoWhile();
+    //=============================
+    SpacersForTerm();
+    SpacersForTerm();
+    //=============================
+    LaunchWhileLoops();
+    //=============================
+    SpacersForTerm();
+    SpacersForTerm();
+    //=============================
+    StringMethods();
+    //=============================
+    SpacersForTerm();
+    SpacersForTerm();
+    //=============================
+    UserInputCaseMonths();
+    //=============================
+    SpacersForTerm();
+    SpacersForTerm();
+    //=============================
+    SwitchStatements();
+    //=============================
+    SpacersForTerm();
+    SpacersForTerm();
+    //=============================
+    ifStatementsInfo();
+    //=============================
+    SpacersForTerm();
+    SpacersForTerm();
+    //=============================
+    ifStatements();
+    //=============================
+    SpacersForTerm();
+    SpacersForTerm();
+    //=============================
+    RightAngleInfo();
+    //=============================
+    SpacersForTerm();
+    SpacersForTerm();
+    //=============================
+    RightAngle();
+    //=============================
+    SpacersForTerm();
+    SpacersForTerm();
+    //=============================
+    UserInputINFO();
+    //=============================
+    SpacersForTerm();
+    SpacersForTerm();
+    //=============================
+    UserInput();
+    //=============================
+    SpacersForTerm();
+    SpacersForTerm();
+    //=============================
+    Logicalops();
+    //=============================
+    SpacersForTerm();
+    SpacersForTerm();
+}
+
+void typeDEFmethod()
+{
+    //typeDef 
+    pairlist_t pairlist;
+    text_t firstname = "Dan ";
+    number_t age = 21;
+
+    //print output
+    cout << age << '\n' << endl;
+    cout << firstname << "endDefMethod" << endl;
+}
+
+void Variables()
+{
+    //int whole numbers
+    int x;
+    x = 5;
+
+    //double (( number including the decimal))
+    double price = 10.99;
+
+    // single character note char can only store single character 
+    char grade = 'A';
+    char initial = 'B';    
+
+    // boolean only has true or false state
+    bool student = false; 
+    bool power = true;
+    bool forSale = false;
+
+    // string objects that represent a sequence of text
+    string name = "bro";
+    string day = "Friday";
+
+    //print out to the console 
+    cout << name << endl;
+    cout << "Int Number is: " << x << endl;
+    cout << "Double Number is || price: " << price << endl;
+}
+
+void ConstantExample()
+{
+    // use the const only if you need something that is going to stay the same
+    const double PI = 3.14159;
+    const int LIGHT_SPEED = 299792458;
+
+
+    double radius = 10;
+    double circumference = 2 * PI * radius;
+    //print out to the console 
+    cout << circumference << "cm" << endl;
+}
+
+void MathOps()
+{
+    //Number vars
+    int students = 20;
+    int cats = 10;
+    int basketballs = 10;
+    int cars = 12;
+    int remainder = 20;
+    
+    //adding
+    students = students + 1;
+    //subtaction
+    cats = cats - 1;
+    //multiplication
+    basketballs = basketballs * 2;
+    //division
+    cars = cars / 2;
+    //division remainder modulus operator
+    remainder = students % 3;
+
+    //print output
+    cout << "Division number of students when its not even aka remainder " << remainder << endl;
+    cout << "Division number of cars " << cars << endl;
+    cout << "multiplication number of basketballs " << basketballs << endl;
+    cout << "subtraction number of cats " << cats << endl;
+    cout << "adding number of students " << students << endl;
+}
+
+void TypeConversion()
+{
+    //vars
+    int correct = 8;
+    int questions = 10;
+
+    //using explicit typing ((if you dont)) the deciaml gets dropped
+    double score = correct / (double) questions * 100;
+
+    //print output
+    cout << "number of questions correct by % " << score << endl;
+}
+
+void UserInput()
+{
+    //var
+    string name;
+    int age;
+
+    //asking what the age is
+    cout << "Whats your age? " << endl;
+    cin >> age;
+
+
+    //asking what name is
+    cout << "Whats is your full name? "<< endl;
+    //reads full string even though cin is after another cin input capture
+    getline(cin >> ws, name);
+
+
+    //print output
+    cout << '\n' << "Hello " << name << endl;
+    cout << "Age is: " << age << endl;
+}
+
+void MathFunctions()
+{
+    //vars 
+    double x = 2;
+    double y = 4;
+    double k = 3.145;
+    double q = 9;
+    double z;//min
+    double a;//max
+    double b;//pow function
+    double f;//sqrt function
+    double h;//absolute value 
+    double i;//round function
+    double o;//ceiling round
+    double p;//floor rounding
+
+
+    //operations
+    z = min (x, y);
+    a = max (x, y);
+    b = pow (x, y);
+    i = round(k);
+    f = sqrt (q);
+    h = abs(-3);
+    o = ceil(k);
+    p = floor(k);
+
+
+    //print output
+    cout << "Round value is " << i << endl;
+    cout << "Absolute value is " << h << endl;
+    cout << "Sqrt value is " << f << endl;
+    cout << "POW value is " << b << endl;
+    cout << "min value is " << z << endl;
+    cout << "max value is " << a << '\n' << endl;
+}
+
+void RightAngle()
+{
+    //vars
+    double a;
+    double b;
+    double c;
+
+    // taking inputs
+    cout << "Enter side A: ";
+    cin >> a;
+    cout << "Enter side B: ";
+    cin >> b;
+
+    //operations 
+    a = pow(a, 2);
+    b = pow(b, 2);
+    c = sqrt(a + b);
+
+    //print output
+    cout << "Side C: " << c << '\n' << endl;
+}
+
+void ifStatements()
+{
+    //vars
+    int age;
+    int min_age = 18;
+    int max_age = 65;
+
+    //input requests
+    cout << " Enter your age: ";
+    cin >> age;
+
+    //operations && print OUTPUT
+    if(age >= min_age)
+    {
+        cout << "Welcome to paying taxes " << age << endl;
+    }
+    else if (age >= max_age || age == max_age)
+    {
+        cout << "Welcome to retirement " << age << '\n' << endl;
+    }
+    else if (age <= min_age)
+    {
+        cout << "Enjoy your childhood " << age << '\n' << endl;
+    }
+}
+
+void SwitchStatements()
+{
+    //vars
+    int month;
+    
+    //input requests
+    cout << "Enter the month (1 - 12): " << endl;
+    cin >> month;
+
+    //operations && print OUTPUT
+    switch (month)
+    {
+    case 1: 
+        cout << "It is January" << '\n' << endl;
+        break;
+
+    case 2: 
+        cout << "It is February" << '\n' << endl;
+        break;
+    
+    case 3: 
+        cout << "It is March" << '\n' << endl;
+        break;
+
+    case 4: 
+        cout << "It is April" << '\n' << endl;
+        break;
+    
+    case 5: 
+        cout << "It is May" << '\n' << endl;
+        break;
+
+    case 6: 
+        cout << "It is June" << '\n' << endl;
+        break;
+    
+    case 7: 
+        cout << "It is July" << '\n' << endl;
+        break;
+    
+    case 8: 
+        cout << "It is Augusts" << '\n' << endl;
+        break;
+
+    case 9: 
+        cout << "It is September" << '\n' << endl;
+        break;
+
+    case 10: 
+        cout << "It is October" << '\n' << endl;
+        break;
+
+    case 11: 
+        cout << "It is November" << '\n' << endl;
+        break;
+    
+    case 12: 
+        cout << "It is December" << '\n' << endl;
+        break;
+
+    default:
+        break;
+    }
+}
+
+void TernaryOp()
+{
+    int number = 9;
+    bool hungry = true;
+
+    hungry ? cout << "You are hungry." << endl : cout << " You are full." << endl;
+    number % 2 == 1 ? cout << "ODD" << endl : cout << "EVEN" << endl;
+}
+
+void Logicalops()
+{
+    int temp;
+    bool sunny = false;
+
+    cout << "Enter The Temperature: " << endl;
+    cin >> temp;
+
+    cout << "Enter The Temperature: " << endl;
+    cin >> temp;
+
+    if ((temp <= 0 || temp >= 30))
+    {
+        cout << "The Temperature is bad!" << endl;
+    }
+    else 
+    {
+        cout << "The Temperature is goods!" << endl;
+    }
+
+    if (sunny == true)
+    {
+        cout << "Its Sunny!" << endl;
+    }
+    else if (sunny != true)
+    {
+        cout << "Its not Sunny!" << endl;
+    }
+}
+
+void StringMethods()
+{
+    string name;
+
+    cout << "This is the string methods section, enter your name and see the results!" << endl;
+
+    cout << "Enter your name: ";
+    cin >> name;
+
+    if(name.length() < 2)
+    {
+        cout <<" Your name can't be under 2 character " << endl;
+    }
+
+    else if(name.length() > 12)
+    {
+        cout <<" Your name can't be over 12 characters " << endl;
+    }
+    else if (name.empty())
+    {
+        cout << "You didn't enter your name " << endl;
+    }
+
+    else
+    {
+        name.insert(0, "@");
+        name.append(" Nuclear Codes");
+        cout << " Welcome " << name << endl;
+    }
+}
+
+void LaunchWhileLoops()
+{
+    string name;
+
+    cout << "This is the While loop section, loop will cycle until you enter a name" << endl;
+
+    while(name.empty())
+    {
+        cout << " Enter your name: " << endl;
+        cin >> name;
+    }
+    cout << "Hello " << name << endl;
+}
+
+void LaunchDoWhile()
+{
+    int number;
+
+    cout << "This is the DO While loop section, loop will cycle until the number is positive" << endl;
+
+    do
+    {
+        cout << " Enter a positive #: " <<  endl;
+        cin >> number;
+    } while (number < 0);
+
+    cout << " The # is: " << number << endl;
+}
+
+void LaunchForLoops()
+{
+    cout << "This is the For loop section, loop will cycle showcasing count up and end text" << endl;
+
+    for(int i = 1; i <= 10; i++)
+    {
+        cout << i << '\n';
+    }
+
+    cout << "Merry Chrismas!\n" << endl; 
+}
+
+void NestedForLoops()
+{
+    int rows;
+    int columns;
+    char symbol;
+
+    cout << " This is the nested ForLoops section, enter your row amount, columns and symbol to create a shape!" << endl;
+
+    cout << " How many rows?: " << endl;
+    cin >> rows;
+    
+    cout << " How many columns?: " << endl;
+    cin >> columns;
+
+    cout << " Enter a symbol to use: " << endl;
+    cin >> symbol;
+
+    for(int i = 1; i <= rows; i++)
+    {
+        for(int j = 1; j <= columns; j++)
+        {
+            cout << symbol;
+        }
+        cout << '\n';
+    }
+}
+
+void UserDefinedFunctions()
+{
+    string name = "bob";
+    HelperHappyBirthday(name);
+
+    cout << "************************************************" << endl;
+
+    BakePizza();
+    BakePizza("pepperoni");
+}
+
+void HelperHappyBirthday(string name)
+{
+    cout << " HappyBirthday to! " << name << '\n';
+    cout << " HappyBirthday to you! " << name << '\n';
+    cout << " HappyBirthday dear you! " << name << '\n';
+    cout << " HappyBirthday to you! " << name << '\n';
+}
+
+void ReturnsFunction()
+{
+    double length = 5.0;
+    cout << "************************************************" << endl;
+
+    double sqaure = HelperDoubleReturn(length);
+    cout << "Length of your square is: " << sqaure << endl;
+}
+
+double HelperDoubleReturn(double length)
+{
+    double result = length * length;
+    return result;
+}
+
+void BakePizza()
+{
+    cout << "Here is your pizza!\n";
+}
+
+void BakePizza(string topping1)
+{
+    cout << "Here is your" << topping1 <<" pizza!\n";
+}
