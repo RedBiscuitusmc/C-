@@ -1,0 +1,56 @@
+include <iostream>
+#include "Variables.h"
+#include "Calculator.h"
+#include "TempConvert.h"
+#include "SpecialPrograms.h"
+
+using namespace std;
+
+
+void RunHelloWorld()
+{
+    //=============================
+    SpacersForTerm();
+    SpacersForTerm();
+    //=============================
+    HelloWorld();
+    //=============================
+    SpacersForTerm();
+    SpacersForTerm();
+    //=============================
+    Variables();
+    ConstantExample(); 
+    typeDEFmethod();
+    MathOps();
+    TypeConversion();
+    MathFunctions();
+    TernaryOp();
+    LaunchForLoops();
+    UserDefinedFunctions();
+    ReturnsFunction();
+    //=============================
+    SpacersForTerm();
+}
+void RunUserInput()
+{
+    SpacersForTerm();
+    //=============================
+    userInputLoadUp();
+    //=============================
+    SpacersForTerm();
+}
+
+void RunCalculator()
+{
+    calMainLaunch();
+}
+
+void RunTempConvert()
+{
+    LaunchTemperatureProgram();
+}
+
+void RunBankingApp()
+{
+    LaunchMainBankingAPP();
+}
