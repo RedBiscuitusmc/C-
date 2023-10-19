@@ -1,0 +1,6 @@
+void calMainLaunch();
+void RunCalculator();
+void PrintCalOpener();
+void CloserCal();
+void GreetingCal();
+void Openingcalu();
