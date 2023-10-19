@@ -1,0 +1,59 @@
+include<iostream>
+#include "RunList.h"
+#include "LaunchProgram.h"
+
+using namespace std;
+
+void LaunchProgram()
+{
+  Opener();
+  ChoiceSelection();
+}
+
+void Opener()
+{
+    cout << "Welcome to the C++ Learner Program. " << '\n';
+    cout << "Please give your input to choose what part of the code you would like to explore." << '\n';
+}
+
+void ChoiceSelection()
+{
+    int choice;
+
+    cout << "Please Choose from the following: " << endl;
+    cout << "1 -- Hello World Section" << endl;
+    cout << "2 -- User Input Section" << endl;
+    cout << "3 -- Simple Calculator Program " << endl;
+    cout << "4 -- Temperature Converter Program " << endl;
+    cout << "5 -- Banking Program " << endl;
+    cin >> choice;
+
+    switch (choice)
+    {
+    case 1:
+        cout << "You are loading HelloWorld: " << endl;
+        RunHelloWorld();
+        break;
+
+    case 2:
+        cout << "You are loading User Input Section: " << endl;
+        RunUserInput();
+        break;
+    
+    case 3:
+        cout << "You are loading Simple Calculator: " << endl;
+        RunCalculator();
+        break;
+    
+    case 4:
+        cout << "You are loading Temperature Converter: " << endl;
+        RunTempConvert();
+
+    case 5:
+        cout << " You are loading the Banking App: " << endl;
+        RunBankingApp();
+
+    default:
+        break;
+    }
+}
