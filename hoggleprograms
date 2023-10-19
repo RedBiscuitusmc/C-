@@ -1,0 +1,10 @@
+using namespace std;
+
+void launchRandomNumGen();
+void LaunchRandomEventGen();
+void LaunchMainBankingAPP();
+
+//banking app functions
+void showBalance(double balance);
+double deposit();
+double withdraw(double balance);
